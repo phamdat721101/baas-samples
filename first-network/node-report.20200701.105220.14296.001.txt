@@ -1,0 +1,173 @@
+================================================================================
+==== Node Report ===============================================================
+
+Event: exception, location: "OnUncaughtException"
+Filename: node-report.20200701.105220.14296.001.txt
+Dump event time:  2020/07/01 10:52:20
+Module load time: 2020/07/01 10:52:20
+Process ID: 14296
+Command line: node /home/baas/.nvm/versions/node/v8.15.1/bin/composer archive list -a test-network 
+
+Node.js version: v8.15.1
+(http_parser: 2.8.0, v8: 6.2.414.75, uv: 1.23.2, zlib: 1.2.11, ares: 1.10.1-DEV,
+ modules: 57, nghttp2: 1.33.0, napi: 3, openssl: 1.0.2r, icu: 60.1, unicode: 10.0,
+ cldr: 32.0, tz: 2017c)
+
+node-report version: 2.2.1 (built against Node.js v8.15.1, glibc 2.23, 64 bit)
+
+OS version: Linux 4.4.0-87-generic #110-Ubuntu SMP Tue Jul 18 12:55:35 UTC 2017
+(glibc: 2.23)
+
+Machine: nameserver01.bkns.vn x86_64
+
+================================================================================
+==== JavaScript Stack Trace ====================================================
+
+Object.parseArgs [as _parseArgs] (/home/baas/.nvm/versions/node/v8.15.1/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1100:12)
+Object.get [as argv] (/home/baas/.nvm/versions/node/v8.15.1/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:957:21)
+Object.<anonymous> (/home/baas/.nvm/versions/node/v8.15.1/lib/node_modules/composer-cli/cli.js:39:5)
+Module._compile (module.js:653:30)
+Object.Module._extensions..js (module.js:664:10)
+Module.load (module.js:566:32)
+tryModuleLoad (module.js:506:12)
+Function.Module._load (module.js:498:3)
+Function.Module.runMain (module.js:694:10)
+startup (bootstrap_node.js:204:16)
+bootstrap_node.js:625:3
+
+================================================================================
+==== Native Stack Trace ========================================================
+
+ 0: [pc=0x7f60cc7df56b] nodereport::OnUncaughtException(v8::Isolate*) [/home/baas/.nvm/versions/node/v8.15.1/lib/node_modules/composer-cli/node_modules/node-report/api.node]
+ 1: [pc=0xeaf792] v8::internal::Isolate::Throw(v8::internal::Object*, v8::internal::MessageLocation*) [node]
+ 2: [pc=0x102905d] v8::internal::Runtime_Throw(int, v8::internal::Object**, v8::internal::Isolate*) [node]
+ 3: [pc=0x2c56852042fd] 
+
+================================================================================
+==== JavaScript Heap and Garbage Collector =====================================
+
+Heap space name: new_space
+    Memory size: 16,777,216 bytes, committed memory: 15,728,672 bytes
+    Capacity: 8,249,344 bytes, used: 6,480,160 bytes, available: 1,769,184 bytes
+Heap space name: old_space
+    Memory size: 17,100,800 bytes, committed memory: 16,872,824 bytes
+    Capacity: 16,626,376 bytes, used: 15,714,048 bytes, available: 912,328 bytes
+Heap space name: code_space
+    Memory size: 2,097,152 bytes, committed memory: 1,380,448 bytes
+    Capacity: 2,009,600 bytes, used: 1,311,616 bytes, available: 697,984 bytes
+Heap space name: map_space
+    Memory size: 1,593,344 bytes, committed memory: 1,121,000 bytes
+    Capacity: 1,557,648 bytes, used: 948,376 bytes, available: 609,272 bytes
+Heap space name: large_object_space
+    Memory size: 1,196,032 bytes, committed memory: 1,196,032 bytes
+    Capacity: 1,461,864,864 bytes, used: 1,174,432 bytes, available: 1,460,690,432 bytes
+
+Total heap memory size: 38,764,544 bytes
+Total heap committed memory: 36,298,976 bytes
+Total used heap memory: 25,628,632 bytes
+Total available heap memory: 1,464,679,200 bytes
+
+Heap memory limit: 1,501,560,832
+
+================================================================================
+==== Resource Usage ============================================================
+
+Process total resource usage:
+  User mode CPU: 1.564000 secs
+  Kernel mode CPU: 0.272000 secs
+  Average CPU Consumption : 183.6%
+  Maximum resident set size: 65,155,072 bytes
+  Page faults: 6 (I/O required) 16099 (no I/O required)
+  Filesystem activity: 1160 reads 16 writes
+
+Event loop thread resource usage:
+  User mode CPU: 1.480000 secs
+  Kernel mode CPU: 0.252000 secs
+  Average CPU Consumption : 173.2%
+  Filesystem activity: 1160 reads 16 writes
+
+================================================================================
+==== Node.js libuv Handle Summary ==============================================
+
+(Flags: R=Ref, A=Active)
+Flags  Type      Address             Details
+[-A]   async     0x000000000397b3b0  
+[--]   check     0x00007fffaf4c5c20  
+[R-]   idle      0x00007fffaf4c5c98  
+[--]   prepare   0x00007fffaf4c5d10  
+[--]   check     0x00007fffaf4c5d88  
+[-A]   async     0x0000000002184780  
+[-A]   async     0x00000000039a9280  
+[-A]   async     0x00000000039a7ff0  
+[R-]   timer     0x00000000039a89c0  repeat: 0, timeout expired: 6720404789 ms ago
+[R-]   tty       0x000000000398cf98  width: 204, height: 63, file descriptor: 9, write queue size: 0, readable, writable
+[-A]   signal    0x00000000039a8ab0  signum: 28 (SIGWINCH)
+[R-]   tty       0x0000000003992718  width: 204, height: 63, file descriptor: 11, write queue size: 0, readable, writable
+[-A]   async     0x00000000039a9050  
+[-A]   async     0x00000000039a7ef0  
+[-A]   async     0x00000000039a6e50  
+[-A]   async     0x00000000039925b0  
+[-A]   async     0x00000000039e3780  
+[-A]   async     0x00000000039a6dc0  
+[-A]   async     0x00000000039e36f0  
+[-A]   async     0x00000000039a8480  
+[-A]   async     0x0000000003a0bf60  
+[-A]   async     0x0000000003a44da0  
+[-A]   async     0x00000000039929d0  
+[-A]   async     0x00007f60cc9e7cc0  
+
+================================================================================
+==== System Information ========================================================
+
+Environment variables
+  XDG_SESSION_ID=13425
+  NVM_CD_FLAGS=
+  TERM=xterm-256color
+  SHELL=/bin/bash
+  SSH_CLIENT=14.241.231.77 60003 222
+  SSH_TTY=/dev/pts/2
+  NVM_DIR=/home/baas/.nvm
+  USER=baas
+  LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+  MAIL=/var/mail/baas
+  PATH=/home/baas/bin:/home/baas/.local/bin:/home/baas/.nvm/versions/node/v8.15.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  PWD=/home/baas/Baas-Gui/fabric-samples/first-network
+  LANG=en_US.UTF-8
+  SHLVL=1
+  HOME=/home/baas
+  LANGUAGE=en_US:en
+  LOGNAME=baas
+  XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+  SSH_CONNECTION=14.241.231.77 60003 103.48.80.41 222
+  NVM_BIN=/home/baas/.nvm/versions/node/v8.15.1/bin
+  LESSOPEN=| /usr/bin/lesspipe %s
+  XDG_RUNTIME_DIR=/run/user/1001
+  LESSCLOSE=/usr/bin/lesspipe %s %s
+  _=/home/baas/.nvm/versions/node/v8.15.1/bin/composer
+  OLDPWD=/home/baas/Baas-Gui/fabric-samples/first-network/customer
+  SUPPRESS_NO_CONFIG_WARNING=y
+
+Resource limits                        soft limit      hard limit
+  core file size (blocks)                       0       unlimited
+  data seg size (kbytes)                unlimited       unlimited
+  file size (blocks)                    unlimited       unlimited
+  max locked memory (bytes)                 65536           65536
+  max memory size (kbytes)              unlimited       unlimited
+  open files                              1048576         1048576
+  stack size (bytes)                      8388608       unlimited
+  cpu time (seconds)                    unlimited       unlimited
+  max user processes                        15647           15647
+  virtual memory (kbytes)               unlimited       unlimited
+
+Loaded libraries
+  /lib/x86_64-linux-gnu/libdl.so.2
+  /lib/x86_64-linux-gnu/librt.so.1
+  /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+  /lib/x86_64-linux-gnu/libm.so.6
+  /lib/x86_64-linux-gnu/libgcc_s.so.1
+  /lib/x86_64-linux-gnu/libpthread.so.0
+  /lib/x86_64-linux-gnu/libc.so.6
+  /lib64/ld-linux-x86-64.so.2
+  /home/baas/.nvm/versions/node/v8.15.1/lib/node_modules/composer-cli/node_modules/node-report/api.node
+
+================================================================================
